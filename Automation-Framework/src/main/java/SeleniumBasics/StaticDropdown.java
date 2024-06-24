@@ -10,7 +10,7 @@ public class StaticDropdown {
 
 	public static void main(String[] args) throws InterruptedException {
 		WebDriver driver = new ChromeDriver();
-		driver.get("https://rahulshettyacademy.com/dropdownsPractise/");
+		driver.get("https:www.google.com/");
 		Thread.sleep(3000);
 		WebElement CurrencyStaticDropdown = driver.findElement(By.id("ctl00_mainContent_DropDownListCurrency"));
 		Select CurrencyDD = new Select(CurrencyStaticDropdown);

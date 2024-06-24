@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>JAVA</groupId>
+	<artifactId>Automation-Framework</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>Axis2 Quickstart Sample</name>
+
+	<properties>
+		<axis2.version>1.8.2</axis2.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.apache.axis2</groupId>
+			<artifactId>axis2-adb</artifactId>
+			<version>${axis2.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.axis2</groupId>
+			<artifactId>axis2-transport-http</artifactId>
+			<version>${axis2.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.axis2</groupId>
+			<artifactId>axis2-transport-local</artifactId>
+			<version>${axis2.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<!--
+		https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>4.21.0</version>
+		</dependency>
+
+	</dependencies>
+	<build>
+		<plugins>
+
+			<!-- <plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.5</source>
+					<target>1.5</target>
+				</configuration>
+			</plugin>-->
+
+			<plugin>
+				<groupId>org.apache.axis2</groupId>
+				<artifactId>simple-server-maven-plugin</artifactId>
+				<version>${axis2.version}</version>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.axis2</groupId>
+				<artifactId>axis2-aar-maven-plugin</artifactId>
+				<version>${axis2.version}</version>
+				<configuration>
+					<servicesXmlFile>
+						src/main/resources/services/SimpleService/META-INF/services.xml</servicesXmlFile>
+				</configuration>
+				<executions>
+					<execution>
+						<id>generates aar</id>
+						<phase>package</phase>
+						<goals>
+							<goal>aar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+</project>

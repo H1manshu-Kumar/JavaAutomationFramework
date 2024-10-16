@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-09-04T23:59:21 IST" name="Suite" finished-at="2024-09-05T00:00:18 IST" duration-ms="57443">
+    <groups>
+      <group name="ErrorHandling">
+        <method signature="ErrorValidation.LoginErrorValidation()[pri:0, instance:mortgageCreditLink.CloudQA_EndToEnd.ErrorValidation@33bc72d1]" name="LoginErrorValidation" class="mortgageCreditLink.CloudQA_EndToEnd.ErrorValidation"/>
+      </group> <!-- ErrorHandling -->
+      <group name="Purchase">
+        <method signature="SubmitOrder.SubmitOrderTest(java.util.HashMap)[pri:0, instance:mortgageCreditLink.CloudQA_EndToEnd.SubmitOrder@46cdf8bd]" name="SubmitOrderTest" class="mortgageCreditLink.CloudQA_EndToEnd.SubmitOrder"/>
+      </group> <!-- Purchase -->
+    </groups>
+    <test started-at="2024-09-04T23:59:21 IST" name="Error Validation Test" finished-at="2024-09-04T23:59:58 IST" duration-ms="36682">
+      <class name="mortgageCreditLink.CloudQA_EndToEnd.ErrorValidation">
+        <test-method is-config="true" signature="LaunchApplication()[pri:0, instance:mortgageCreditLink.CloudQA_EndToEnd.ErrorValidation@33bc72d1]" started-at="2024-09-04T23:59:21 IST" name="LaunchApplication" finished-at="2024-09-04T23:59:33 IST" duration-ms="12312" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LaunchApplication -->
+        <test-method signature="LoginErrorValidation()[pri:0, instance:mortgageCreditLink.CloudQA_EndToEnd.ErrorValidation@33bc72d1]" started-at="2024-09-04T23:59:33 IST" name="LoginErrorValidation" finished-at="2024-09-04T23:59:35 IST" duration-ms="1246" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginErrorValidation -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:mortgageCreditLink.CloudQA_EndToEnd.ErrorValidation@33bc72d1]" started-at="2024-09-04T23:59:35 IST" name="tearDown" finished-at="2024-09-04T23:59:37 IST" duration-ms="1982" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="LaunchApplication()[pri:0, instance:mortgageCreditLink.CloudQA_EndToEnd.ErrorValidation@33bc72d1]" started-at="2024-09-04T23:59:37 IST" name="LaunchApplication" finished-at="2024-09-04T23:59:40 IST" duration-ms="3584" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LaunchApplication -->
+        <test-method signature="ProductErrorValidation()[pri:0, instance:mortgageCreditLink.CloudQA_EndToEnd.ErrorValidation@33bc72d1]" started-at="2024-09-04T23:59:40 IST" name="ProductErrorValidation" finished-at="2024-09-04T23:59:55 IST" duration-ms="14984" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ProductErrorValidation -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:mortgageCreditLink.CloudQA_EndToEnd.ErrorValidation@33bc72d1]" started-at="2024-09-04T23:59:55 IST" name="tearDown" finished-at="2024-09-04T23:59:58 IST" duration-ms="2517" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- mortgageCreditLink.CloudQA_EndToEnd.ErrorValidation -->
+    </test> <!-- Error Validation Test -->
+    <test started-at="2024-09-04T23:59:21 IST" name="Submit Order Test" finished-at="2024-09-05T00:00:18 IST" duration-ms="57443">
+      <class name="mortgageCreditLink.CloudQA_EndToEnd.SubmitOrder">
+        <test-method is-config="true" signature="LaunchApplication()[pri:0, instance:mortgageCreditLink.CloudQA_EndToEnd.SubmitOrder@46cdf8bd]" started-at="2024-09-04T23:59:21 IST" name="LaunchApplication" finished-at="2024-09-04T23:59:33 IST" duration-ms="11892" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LaunchApplication -->
+        <test-method signature="SubmitOrderTest(java.util.HashMap)[pri:0, instance:mortgageCreditLink.CloudQA_EndToEnd.SubmitOrder@46cdf8bd]" started-at="2024-09-04T23:59:33 IST" name="SubmitOrderTest" data-provider="getData" finished-at="2024-09-04T23:59:43 IST" duration-ms="9322" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{password=Password@1234, product=ZARA COAT 3, email=himanshu.kumar244@gmail.com}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SubmitOrderTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:mortgageCreditLink.CloudQA_EndToEnd.SubmitOrder@46cdf8bd]" started-at="2024-09-04T23:59:43 IST" name="tearDown" finished-at="2024-09-04T23:59:45 IST" duration-ms="2104" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="LaunchApplication()[pri:0, instance:mortgageCreditLink.CloudQA_EndToEnd.SubmitOrder@46cdf8bd]" started-at="2024-09-04T23:59:45 IST" name="LaunchApplication" finished-at="2024-09-04T23:59:48 IST" duration-ms="3710" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LaunchApplication -->
+        <test-method signature="SubmitOrderTest(java.util.HashMap)[pri:0, instance:mortgageCreditLink.CloudQA_EndToEnd.SubmitOrder@46cdf8bd]" started-at="2024-09-04T23:59:48 IST" name="SubmitOrderTest" data-provider="getData" finished-at="2024-09-05T00:00:06 IST" duration-ms="17820" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{password=Password@1234, product=ADIDAS ORIGINAL, email=himanshu.kumar244@gmail.com}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SubmitOrderTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:mortgageCreditLink.CloudQA_EndToEnd.SubmitOrder@46cdf8bd]" started-at="2024-09-05T00:00:06 IST" name="tearDown" finished-at="2024-09-05T00:00:08 IST" duration-ms="1974" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="LaunchApplication()[pri:0, instance:mortgageCreditLink.CloudQA_EndToEnd.SubmitOrder@46cdf8bd]" started-at="2024-09-05T00:00:08 IST" name="LaunchApplication" finished-at="2024-09-05T00:00:15 IST" duration-ms="6420" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LaunchApplication -->
+        <test-method signature="OrderHistoryTest()[pri:0, instance:mortgageCreditLink.CloudQA_EndToEnd.SubmitOrder@46cdf8bd]" started-at="2024-09-05T00:00:15 IST" name="OrderHistoryTest" finished-at="2024-09-05T00:00:17 IST" depends-on-methods="mortgageCreditLink.CloudQA_EndToEnd.SubmitOrder.SubmitOrderTest" duration-ms="1961" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OrderHistoryTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:mortgageCreditLink.CloudQA_EndToEnd.SubmitOrder@46cdf8bd]" started-at="2024-09-05T00:00:17 IST" name="tearDown" finished-at="2024-09-05T00:00:18 IST" duration-ms="1782" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- mortgageCreditLink.CloudQA_EndToEnd.SubmitOrder -->
+    </test> <!-- Submit Order Test -->
+  </suite> <!-- Suite -->
+</testng-results>

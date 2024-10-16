@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="mortgageCreditLink.BaseTest.Listeners"/>
+  </listeners>
+  <test thread-count="2" parallel="tests" name="Submit Order Test(failed)">
+    <classes>
+      <class name="mortgageCreditLink.CloudQA_EndToEnd.SubmitOrder">
+        <methods>
+          <include name="LaunchApplication"/>
+          <include name="SubmitOrderTest" invocation-numbers="0"/>
+          <include name="OrderHistoryTest"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- mortgageCreditLink.CloudQA_EndToEnd.SubmitOrder -->
+    </classes>
+  </test> <!-- Submit Order Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

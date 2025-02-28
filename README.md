@@ -71,8 +71,3 @@ Contributions are welcome! Feel free to raise issues or submit pull requests.
 ## 📄 License
 
 This project is licensed under the MIT License.
-
-## 🔗 Connect
-
-- GitHub: [H1manshu-Kumar](https://github.com/H1manshu-Kumar)
-- LinkedIn: [Your LinkedIn Profile](#)

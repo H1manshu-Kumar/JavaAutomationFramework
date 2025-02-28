@@ -1,41 +1,78 @@
 # Java Automation Framework
 
-This Java-based Test Automation Framework leverages Selenium WebDriver and TestNG to facilitate efficient and scalable automated testing for web applications. Designed with a focus on modularity and ease of use, it integrates seamlessly with CI/CD pipelines and supports cross-browser testing.
+![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white)  
 
-## Table of Contents
+A robust and scalable **Java Automation Framework** for UI and API testing, designed to enhance test efficiency and maintainability.
 
-- [Features](#features)
-- [Prerequisites](#prerequisites)
-- [Setup Instructions](#setup-instructions)
-- [Running Tests](#running-tests)
-- [Reporting](#reporting)
-- [CI/CD Integration](#cicd-integration)
-- [Folder Structure](#folder-structure)
-- [Contributing](#contributing)
-- [License](#license)
+## 🚀 Features
 
-## Features
+- **Modular & Scalable**: Easily extendable and maintainable test structure.
+- **TestNG Integration**: Supports parallel execution, reporting, and annotations.
+- **Selenium WebDriver**: For web UI automation.
+- **REST Assured**: For API testing.
+- **Maven Support**: Dependency management and build automation.
+- **Logging & Reporting**: Integrated with Log4j and Extent Reports.
+- **CI/CD Ready**: Easily integrates with Jenkins and GitHub Actions.
 
-- **Cross-Browser Testing**: Supports multiple browsers including Chrome, Firefox, and Edge.
-- **Parallel Test Execution**: Utilizes TestNG for running tests in parallel, reducing execution time.
-- **Data-Driven Testing**: Reads test data from Excel and JSON files to drive test cases.
-- **Page Object Model (POM)**: Implements POM design pattern for maintainable and reusable code.
-- **Comprehensive Reporting**: Generates detailed HTML reports with ExtentReports, including screenshots and logs.
-- **CI/CD Integration**: Easily integrates with Jenkins and GitHub Actions for continuous testing.
-- **Logging and Debugging**: Incorporates Log4j2 for logging and captures screenshots on test failures.
+## 🏗 Tech Stack
 
-## Prerequisites
+- **Programming Language**: Java
+- **Framework**: TestNG
+- **UI Testing**: Selenium WebDriver
+- **API Testing**: REST Assured
+- **Build Tool**: Maven
+- **Logging**: Log4j
+- **Reporting**: Extent Reports
 
-Before setting up the framework, ensure you have the following installed:
+## 📌 Prerequisites
 
-- **Java Development Kit (JDK)**: Version 11 or higher.
-- **Apache Maven**: For dependency management and build automation.
-- **Preferred IDE**: Such as IntelliJ IDEA or Eclipse.
-- **Git**: For version control.
+- **Java 11+** installed
+- **Maven** installed
+- **Git** installed
 
-## Setup Instructions
+## ⚡ Getting Started
 
-1. **Clone the Repository**:
+1. Clone the repository:
    ```bash
    git clone https://github.com/H1manshu-Kumar/JavaAutomationFramework.git
+   ```
+2. Navigate to the project directory:
+   ```bash
    cd JavaAutomationFramework
+   ```
+3. Install dependencies:
+   ```bash
+   mvn clean install
+   ```
+4. Run tests:
+   ```bash
+   mvn test
+   ```
+
+## 📊 Project Structure
+```
+JavaAutomationFramework/
+│-- src/main/java  # Framework code
+│-- src/test/java  # Test cases
+│-- pom.xml        # Maven dependencies
+│-- testng.xml     # TestNG test suite
+│-- README.md      # Project documentation
+```
+
+## 📈 CI/CD Integration
+
+- Can be integrated with **Jenkins, GitHub Actions, and Azure Pipelines** for automated test execution.
+- Supports **parallel execution** and **report generation**.
+
+## 🏆 Contributing
+
+Contributions are welcome! Feel free to raise issues or submit pull requests.
+
+## 📄 License
+
+This project is licensed under the MIT License.
+
+## 🔗 Connect
+
+- GitHub: [H1manshu-Kumar](https://github.com/H1manshu-Kumar)
+- LinkedIn: [Your LinkedIn Profile](#)

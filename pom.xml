@@ -21,11 +21,7 @@
 			<artifactId>testng</artifactId>
 			<version>7.4.0</version>
 			<scope>test</scope>
-		</dependency>
-		<!-- https://mvnrepository.com/artifact/com.github.bonigarcia/webdrivermanager 
-			<dependency> <groupId>com.github.bonigarcia</groupId> <artifactId>webdrivermanager</artifactId> 
-			<version>webdrivermanager-5.5.0</version> </dependency> -->
-		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+		</dependency>		
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-java</artifactId>

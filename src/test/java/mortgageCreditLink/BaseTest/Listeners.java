@@ -13,70 +13,43 @@ import com.aventstack.extentreports.Status;
 
 import resources.ExtentReporterNG;
 
+/**
+ * TestNG Listener class for handling test events and logging using ExtentReports.
+ * This class listens to test lifecycle events and logs test status (pass/fail),
+ * attaches screenshots on failure, and generates a report.
+ */
 public class Listeners extends BaseTest implements ITestListener {
-	WebDriver driver;
-	ExtentTest test;
-	ExtentReports extent = ExtentReporterNG.getReportObject();
-	ThreadLocal<ExtentTest> extentTest = new ThreadLocal<ExtentTest> ();
 
+	WebDriver driver; // WebDriver instance to capture screenshots
+	ExtentTest test; // ExtentTest object to log individual test results
+
+	// ExtentReports object initialized from utility class
+	ExtentReports extent = ExtentReporterNG.getReportObject();
+
+	// Thread-safe ExtentTest storage to avoid data collision in parallel execution
+	ThreadLocal<ExtentTest> extentTest = new ThreadLocal<ExtentTest>();
+
+	/**
+	 * Triggered when a test method starts.
+	 * Initializes a new ExtentTest for the method and assigns it to the current thread.
+	 */
 	@Override
 	public void onTestStart(ITestResult result) {
-//		ITestListener.super.onTestStart(result);
+		// Create a new test entry in the Extent Report using method name
 		test = extent.createTest(result.getMethod().getMethodName());
-		extentTest.set(test);// here thread local will assign the unique thread ID to test object 
+
+		// Store test object in thread-local to ensure thread safety in parallel tests
+		extentTest.set(test);
 	}
 
+	/**
+	 * Triggered when a test method passes.
+	 * Logs the PASS status to the report.
+	 */
 	@Override
 	public void onTestSuccess(ITestResult result) {
 		extentTest.get().log(Status.PASS, "Test Passed");
 	}
 
-	@Override
-	public void onTestFailure(ITestResult result) {
-		// ITestListener.super.onTestFailure(result);
-		extentTest.get().fail(result.getThrowable());
-		try {
-			driver = (WebDriver) result.getTestClass().getRealClass().getField("driver").get(result.getInstance());
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-
-		// Add Screenshots code here
-		// Step 1 - Take a screenshot
-		// Step 2 - Attach it to the extent report
-		String filePath = null;
-		try {
-			filePath = takeScreenshot(result.getMethod().getMethodName(), driver);
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		extentTest.get().addScreenCaptureFromPath(filePath, result.getMethod().getMethodName());
-	}
-
-	@Override
-	public void onTestSkipped(ITestResult result) {
-		ITestListener.super.onTestSkipped(result);
-	}
-
-	@Override
-	public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
-		ITestListener.super.onTestFailedButWithinSuccessPercentage(result);
-	}
-
-	@Override
-	public void onTestFailedWithTimeout(ITestResult result) {
-		ITestListener.super.onTestFailedWithTimeout(result);
-	}
-
-	@Override
-	public void onStart(ITestContext context) {
-		ITestListener.super.onStart(context);
-	}
-
-	@Override
-	public void onFinish(ITestContext context) {
-		extent.flush();
-
-	}
-
-}
+	/**
+	 * Triggered when a test*

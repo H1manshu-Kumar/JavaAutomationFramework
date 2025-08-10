@@ -1,20 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<!-- TestNG Suite configuration file for running automated tests -->
+
+<!-- Root suite configuration
+     - parallel="tests" means each <test> tag will run in parallel
+     - thread-count="2" allows up to 2 tests to run at the same time
+-->
 <suite parallel="tests" thread-count="2" name="Suite">
+
+	<!-- Example of non-parallel suite definition (commented out) -->
 	<!-- <suite thread-count="2" name="Suite"> -->
+
+	<!-- Listeners: Classes that listen to test events and perform actions
+	     Here, 'Listeners' class is used for reporting or logging
+	-->
 	<listeners>
 		<listener class-name="mortgageCreditLink.BaseTest.Listeners" />
 	</listeners>
+
+	<!-- First Test: Submit Order functionality -->
 	<test thread-count="5" name="Submit Order Test">
 		<classes>
+			<!-- Executes SubmitOrder test class -->
 			<class name="mortgageCreditLink.CloudQA_EndToEnd.SubmitOrder" />
 		</classes>
-	</test> <!-- Test -->
+	</test> <!-- End of Submit Order Test -->
 
+	<!-- Second Test: Error Validation functionality -->
 	<test thread-count="5" name="Error Validation Test">
 		<classes>
-			<class
-				name="mortgageCreditLink.CloudQA_EndToEnd.ErrorValidation" />
+			<!-- Executes ErrorValidation test class -->
+			<class name="mortgageCreditLink.CloudQA_EndToEnd.ErrorValidation" />
 		</classes>
-	</test> <!-- Test -->
-</suite> <!-- Suite -->
+	</test> <!-- End of Error Validation Test -->
+
+</suite> <!-- End of Suite -->

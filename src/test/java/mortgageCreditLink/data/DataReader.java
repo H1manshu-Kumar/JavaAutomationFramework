@@ -13,18 +13,33 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class DataReader {
-	public List<HashMap<String, String>> getJsonDataToMap() throws IOException {
-		// read json to string
-		String jsonContent = FileUtils.readFileToString(new File(
-				System.getProperty("user.dir") + "\\src\\test\\java\\mortgageCreditLink\\data\\PurchaseOrder.json"),
-				StandardCharsets.UTF_8);
 
-		// Convert String to HashMap, need to add new dependency for this
-		ObjectMapper mapper = new ObjectMapper();
-		List<HashMap<String, String>> data = mapper.readValue(jsonContent,
-				new TypeReference<List<HashMap<String, String>>>() {
-				});
-		return data;
-	}
+    /**
+     * Reads JSON data from a file and converts it into a List of HashMaps.
+     * 
+     * @return List of HashMaps containing JSON key-value pairs.
+     * @throws IOException if the file is missing, inaccessible, or parsing fails.
+     */
+    public List<HashMap<String, String>> getJsonDataToMap() throws IOException {
 
+        // Read the contents of the JSON file into a String.
+        // The file path is built dynamically using the project's base directory (user.dir).
+        String jsonContent = FileUtils.readFileToString(
+                new File(System.getProperty("user.dir") 
+                        + "\\src\\test\\java\\mortgageCreditLink\\data\\PurchaseOrder.json"),
+                StandardCharsets.UTF_8);
+
+        // Create an ObjectMapper instance to convert JSON string into Java objects.
+        ObjectMapper mapper = new ObjectMapper();
+
+        // Convert JSON string into a List of HashMaps.
+        // TypeReference is used here to maintain generic type information at runtime.
+        List<HashMap<String, String>> data = mapper.readValue(
+                jsonContent,
+                new TypeReference<List<HashMap<String, String>>>() {
+                });
+
+        // Return the parsed data
+        return data;
+    }
 }

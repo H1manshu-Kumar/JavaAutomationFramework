@@ -1,12 +1,20 @@
 [
     {
+        // User login email ID
         "email": "test@gmail.com",
+
+        // User account password (plaintext here for test purposes)
         "password": "Password@1234",
+
+        // Product name to be purchased in the test scenario
         "product": "ZARA COAT 3"
     },
     {
+        // Another test case with same user credentials but a different product
         "email": "test@gmail.com",
         "password": "Password@1234",
+        
+        // Product name for the second test scenario
         "product": "ADIDAS ORIGINAL"
     }
 ]

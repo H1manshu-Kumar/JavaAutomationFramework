@@ -1,18 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<!-- TestNG suite definition file.
+     This file controls which tests to execute, how to group them,
+     and any parallel execution/thread settings. -->
+
 <suite name="Suite">
+	
+	<!-- Group definition: Only tests belonging to the 'ErrorHandling' group will run -->
 	<groups>
 		<run>
 			<include name="ErrorHandling" />
 		</run>
-
 	</groups>
+
+	<!-- Test block: Runs multiple classes as part of the 'Test' suite
+	     'thread-count=5' means tests can be run in parallel with up to 5 threads -->
 	<test thread-count="5" name="Test">
+		
 		<classes>
-			<class
-				name="mortgageCreditLink.CloudQA_EndToEnd.ErrorValidation" />
+			<!-- Class containing test cases for error validation -->
+			<class name="mortgageCreditLink.CloudQA_EndToEnd.ErrorValidation" />
+			
+			<!-- Base test class (likely contains setup/teardown methods) -->
 			<class name="mortgageCreditLink.BaseTest.BaseTest" />
+			
+			<!-- Class containing test cases for submitting an order -->
 			<class name="mortgageCreditLink.CloudQA_EndToEnd.SubmitOrder" />
 		</classes>
-	</test> <!-- Test -->
-</suite> <!-- Suite -->
+		
+	</test> <!-- End of Test block -->
+
+</suite> <!-- End of Suite -->

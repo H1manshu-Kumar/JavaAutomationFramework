@@ -1,17 +1,32 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Suite">
+<?xml version="1.0" encoding="UTF-8"?> 
+<!-- XML declaration specifying version and encoding -->
+
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd"> 
+<!-- Declares this as a TestNG suite configuration file -->
+
+<suite name="Suite"> 
+    <!-- Defines the overall test suite with the name 'Suite' -->
+
 	<groups>
 		<run>
 			<include name="Purchase" />
+			<!-- Runs only the test group named 'Purchase' -->
 		</run>
 	</groups>
-	<test thread-count="5" name="Test">
+
+	<test thread-count="5" name="Test"> 
+        <!-- Defines a TestNG test named 'Test' that can run with max 5 threads in parallel -->
+
 		<classes>
-			<class
-				name="mortgageCreditLink.CloudQA_EndToEnd.ErrorValidation" />
+			<class name="mortgageCreditLink.CloudQA_EndToEnd.ErrorValidation" />
+			<!-- Includes the ErrorValidation test class -->
+
 			<class name="mortgageCreditLink.BaseTest.BaseTest" />
+			<!-- Includes the BaseTest class (common setup/teardown for tests) -->
+
 			<class name="mortgageCreditLink.CloudQA_EndToEnd.SubmitOrder" />
+			<!-- Includes the SubmitOrder test class -->
 		</classes>
-	</test> <!-- Test -->
-</suite> <!-- Suite -->
+	</test> <!-- End of 'Test' block -->
+
+</suite> <!-- End of Suite -->

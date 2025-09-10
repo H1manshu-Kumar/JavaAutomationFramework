@@ -22,7 +22,6 @@ A robust and scalable **Java Automation Framework** for UI and API testing, desi
 - **API Testing**: REST Assured
 - **Build Tool**: Maven
 - **Logging**: Log4j
-- **Reporting**: Extent Reports
 
 ## 📌 Prerequisites
 

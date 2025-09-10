@@ -65,5 +65,5 @@ JavaAutomationFramework/
 
 ## 🏆 Contributing
 
-Contributions are welcome!! Feel free to raise issues or submit pull requests
+Contributions are welcome!! Feel free to raise issues or submit pull requests.
 

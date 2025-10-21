@@ -27,6 +27,6 @@
 			<class name="mortgageCreditLink.CloudQA_EndToEnd.SubmitOrder" />
 			<!-- Includes the SubmitOrder test class -->
 		</classes>
-	</test> <!-- End of 'Test' block -->
+	</test>
 
 </suite> <!-- End of Suite -->

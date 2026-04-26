@@ -9,12 +9,6 @@
 -->
 <suite parallel="tests" thread-count="2" name="Suite">
 
-	<!-- Example of non-parallel suite definition (commented out) -->
-	<!-- <suite thread-count="2" name="Suite"> -->
-
-	<!-- Listeners: Classes that listen to test events and perform actions
-	     Here, 'Listeners' class is used for reporting or logging
-	-->
 	<listeners>
 		<listener class-name="mortgageCreditLink.BaseTest.Listeners" />
 	</listeners>
@@ -25,7 +19,7 @@
 			<!-- Executes SubmitOrder test class -->
 			<class name="mortgageCreditLink.CloudQA_EndToEnd.SubmitOrder" />
 		</classes>
-	</test> <!-- End of Submit Order Test -->
+	</test>
 
 	<!-- Second Test: Error Validation functionality -->
 	<test thread-count="5" name="Error Validation Test">

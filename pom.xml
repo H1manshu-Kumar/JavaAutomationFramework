@@ -19,11 +19,8 @@
 	<!-- Human-readable project name -->
 	<name>PilotProject_EndToEnd</name>
 
-	<!-- Project URL (can be changed to actual project website) -->
-	<!-- FIXME change it to the project's website -->
 	<url>http://www.example.com</url>
 
-	<!-- Properties used in build configuration -->
 	<properties>
 		<!-- Encoding used for source files -->
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -139,7 +136,6 @@
 			</build>
 		</profile>
 
-		<!-- ErrorValidation test suite -->
 		<profile>
 			<id>ErrorValidation</id>
 			<build>

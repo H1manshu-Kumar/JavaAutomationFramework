@@ -149,7 +149,7 @@ JavaAutomationFramework/
 ├── reports/                       # Generated ExtentReports HTML output
 ├── Screenshots/                   # Test failure screenshots
 ├── pom.xml                        # Maven build & dependency config
-└── README.md                      # Project documentation
+└── README.md                      # Project documentation readme
 ```
 
 ---
